@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32c3dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_DISABLE_ESPNOW -D WLED_DISABLE_BROWNOUT_DET -D LOLIN_WIFI_FIX -D WLED_ENABLE_SIMPLE_UI -D WLED_DISABLE_MQTT -D WLED_DISABLE_LOXONE -D WLED_DISABLE_WEBSOCKETS -D WLED_DISABLE_HUESYNC -D CLIENT_SSID='\''"La Octava de VR"'\'' -D CLIENT_PASS='\''"Ver0&susAmig0s"'\'' ${esp32.AR_build_flags} -D USERMOD_AUTO_SAVE -D USERMOD_PIRSWITCH' >>platformio.ini
+        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_DISABLE_ESPNOW -D WLED_DISABLE_BROWNOUT_DET -D LOLIN_WIFI_FIX -D WLED_ENABLE_SIMPLE_UI -D WLED_DISABLE_MQTT -D WLED_DISABLE_LOXONE -D WLED_DISABLE_WEBSOCKETS -D WLED_DISABLE_HUESYNC ${esp32.AR_build_flags} -D USERMOD_AUTO_SAVE -D USERMOD_PIRSWITCH' >>platformio.ini
         echo 'lib_deps = ' >>platformio.ini
         echo '  ${env:esp32c3dev.lib_deps}' >>platformio.ini
         echo '  ${esp32.AR_lib_deps}' >>platformio.ini
